@@ -3,10 +3,10 @@ name: values log test
 on:
   workflow_dispatch:
   push:
-  branches: master
-  paths-ignore:
-    - '*'
-    - '!.github/workflows/build-ndk.yml'
+    branches: master
+    paths-ignore:
+      - '*'
+      - '!.github/workflows/build-ndk.yml'
 jobs:
   test:
     steps:
