@@ -1,0 +1,21 @@
+name: values log test
+
+on:
+  workflow_dispatch:
+  push:
+  branches: master
+  paths-ignore:
+    - '*'
+    - '!.github/workflows/build-ndk.yml'
+jobs:
+  test:
+    steps:
+      - uses: actions/checkout@v2
+        name: Checkout
+        with:
+          submodules: true
+          lfs: true
+      - name: log context
+        run: |
+          echo ${{ github }}
+          echo ${{ github.actor }}
