@@ -1,0 +1,11 @@
+name: Release Created
+
+on:
+  release:
+    [unpublished]
+
+jobs:
+  steps:
+    - name: echo
+      run:
+        echo "Hello World ${{ github.actor }}, release created!"
