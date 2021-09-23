@@ -18,5 +18,6 @@ jobs:
           lfs: true
       - name: log context
         run: |
+          echo "$GITHUB_CONTEXT"
           echo ${{ github }}
           echo ${{ github.actor }}
