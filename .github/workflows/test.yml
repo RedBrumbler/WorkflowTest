@@ -9,6 +9,7 @@ on:
       - '!.github/workflows/build-ndk.yml'
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         name: Checkout
