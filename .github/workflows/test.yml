@@ -11,6 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - uses: FranzDiebold/github-env-vars-action@v2
       - uses: actions/checkout@v2
         name: Checkout
         with:
@@ -21,3 +22,8 @@ jobs:
           echo "$GITHUB_CONTEXT"
           echo ${{ github }}
           echo ${{ github.actor }}
+      
+      - name: log name stuff
+        run: |
+          echo "${{ $CI_REPOSITORY_OWNER }}"
+          echo "${{ $CI_SHA_SHORT }}"
