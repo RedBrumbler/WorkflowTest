@@ -25,5 +25,5 @@ jobs:
       
       - name: log name stuff
         run: |
-          echo "${{ $CI_REPOSITORY_OWNER }}"
-          echo "${{ $CI_SHA_SHORT }}"
+          echo "${{ env.CI_REPOSITORY_OWNER }}"
+          echo "${{ env.CI_SHA_SHORT }}"
